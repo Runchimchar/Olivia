@@ -1,0 +1,6 @@
+Go through the array iterativly
+when tabs == depth, add string as a new Word to root
+when the tabs > depth, increment depth, add main Word to the stack, and set the main word to be the last word added
+when the tabs < depth, decrement depth until depth == new num of tabs, pop Words from stack until depth is correct and set last Word to be main Word
+
+The main Word is the one who gets more children
