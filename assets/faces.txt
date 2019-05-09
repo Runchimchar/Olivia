@@ -1,0 +1,59 @@
+------ Type 1 ------
+c:
+:c
+c;
+:'c
+:|
+:p
+------ Type 2 ------
+O-O
+O~O
+O3O
+O_O
+O.O
+OnO
+OuO
+O#O
+OxO
+OvO
+UnU
+XnX
+e~e
+9-6
+9.6
+O-o
+T^T
+I-I
+T~T
+T_T
+-_-
+~.~
+
+------ Rated Faces ------
+face	excitement, mood (0-1) mood is ranked from negative at 0 and positive at 1
+#BEGINLIST
+OuO	1	1
+O3O	0.5	1
+-u-	0	1
+O.O	1	0.5
+o-o	0.5	0.5
+-_-	0	0.5
+OnO	1	0
+T~T	0.5	0
+T^T	0	0
+#ENDLIST
+O~O	1	0.2
+
+O_O
+O.O
+O#O
+OxO
+UnU
+XnX
+e~e
+9-6
+9.6
+O-o
+I-I
+T_T
+~.~

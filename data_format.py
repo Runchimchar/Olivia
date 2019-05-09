@@ -55,29 +55,30 @@ class Formater(object):
 #           ------ Various formating methods ------
 
 def parse(val,wordDict=None):
-    '''Takes a string and splits it into an array of words'''
-    val = str(val)
-    wordList = val.split()
-    # use while rather than for because the length of wordList can both lengthen and shorten
-    i = 0
-    while i < len(wordList):
-        wordList[i] = wordList[i].strip('.,()!?~ \t\n')
-        if wordDict is not None and wordDict.check_word(wordList[i].lower()):
-            wordList[i] = wordList[i].lower()
-        if wordList[i].lower() == "i'm":
-            wordList[i] = 'i'
-            wordList.insert(i+1,'am')
-        if wordList[i] == '': del wordList[i]
-        # increment i
-        i += 1
-    return wordList
+	'''Takes a string and splits it into an array of words'''
+	val = str(val)
+	wordList = val.split()
+	# use while rather than for because the length of wordList can both lengthen and shorten
+	i = 0
+	while i < len(wordList):
+		# Cleanup each word
+		wordList[i] = wordList[i].strip('.,()!?~:"{}[] \t\n')
+		if wordDict is not None and wordDict.check_word(wordList[i].lower()):
+			wordList[i] = wordList[i].lower()
+		if wordList[i].lower() == "i'm": # TODO: this is too specific, we won't be able to make a case for all of these.
+			wordList[i] = 'i'
+			wordList.insert(i+1,'am')
+		if wordList[i] == '': del wordList[i]
+		# increment i
+		i += 1
+	return wordList
 
 def assemble(val):
-    '''Takes an array of individual strings and combines into a sentence'''
-    out = ''
-    for i in val:
-        out += i + ' '
-    return out.strip().capitalize()
+	'''Takes an array of individual strings and combines into a sentence'''
+	out = ''
+	for i in val:
+		out += i + ' '
+	return out.strip().capitalize()
 		
 #           ------ TESTER CODE ------
 

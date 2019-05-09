@@ -1,16 +1,18 @@
 my
 	name
 		is
-			BLANK
+			BLANK # inline comment preceded by a space
 i
 	am
 		BLANK
+		# Full line comment
 		a
 			BLANK
 				person
 		very
 			BLANK
 you
-	are
+	are # inline comment preceded by a space
 		BLANK
 goodbye
+hello
