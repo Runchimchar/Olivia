@@ -208,4 +208,4 @@ if __name__ == "__main__":
         e = Emote('assets/faces.txt')
         for face in e.getFaces():
                 print(face)
-        #print(p)
+
