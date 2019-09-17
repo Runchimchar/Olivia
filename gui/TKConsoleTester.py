@@ -1,4 +1,4 @@
-from TKinterConsole import CanvasConsole
+from gui.TKinterConsole import CanvasConsole
 import tkinter as tk
 
 if __name__ == "__main__":
